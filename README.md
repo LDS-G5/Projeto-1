@@ -4,5 +4,7 @@
 
 - João Francisco Carvalho Soares de Oliveira Queiroga
 - Klaus Leão Teles
-- ...
+- Diego Machado Cordeiro
+-Vinicius Gonzaga Guilherme
+-Lucas Tabosa Guedes
 
