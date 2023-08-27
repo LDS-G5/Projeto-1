@@ -1,3 +1,5 @@
+package projeto;
+
 public class Universidade {
     private String nomeUni;
 

@@ -1,3 +1,5 @@
+package projeto;
+
 import java.util.Date;
 
 public abstract class Pessoa {
