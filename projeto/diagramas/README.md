@@ -1,7 +1,7 @@
 ## Diagrama de Caso de Uso
 
-![Diagrama de Caso de Uso](DiagramaCasoDeUso.png)
+![Diagrama de Caso de Uso](DiagramaCasoDeUso.ATUALIZADO.png)
 
 ## Diagrama de Classes
 
-![Diagrama de Classes](DiagramaDeClasse.png)
+![Diagrama de Classes](DiagramaDeClasses.png)
