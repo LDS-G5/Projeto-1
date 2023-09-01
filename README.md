@@ -7,4 +7,5 @@
 - Diego Machado Cordeiro
 - Vinicius Gonzaga Guilherme
 - Lucas Tabosa Guedes
+- Henrique Santana Diniz
 
