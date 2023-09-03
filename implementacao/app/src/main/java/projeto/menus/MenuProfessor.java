@@ -17,6 +17,31 @@ public class MenuProfessor {
 	}
 
 	public void menu() {
-		System.out.println("Menu Professor");
+		int opcao =99;
+		while(opcao != 0) {
+			System.out.println("Digite qual opção deseja");
+			System.out.println("1- Ver alunos matriculados");
+			System.out.println("2- Ver disciplinas");
+			System.out.println("0- Encerrar");
+			opcao = scanner.nextInt();
+
+			switch (opcao) {
+				case 1:
+//					professor.verificarMatriculados();
+
+
+					break;
+				case 2:
+//				implentar logica disciplinas
+					break;
+
+				case 0:
+					System.out.println("encerrar");
+					break;
+
+				default:
+					System.out.println("Opção invalida");
+			}
+		}
 	}
 }
