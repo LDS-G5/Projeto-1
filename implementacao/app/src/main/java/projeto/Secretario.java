@@ -8,18 +8,15 @@ public class Secretario extends Usuario{
     }
 
     public void GerarCurriculo(){
-
     }
 
     public void cadastrarDisciplinas(){
-
     }
-    public void gerenciarAluno(){
 
+    public void gerenciarAluno(){
     }
 
     public void gerenciarProfessor(){
-
     }
 
 	@Override
