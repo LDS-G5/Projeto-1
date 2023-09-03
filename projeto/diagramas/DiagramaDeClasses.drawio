@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-09-03T15:05:20.138Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.3.7 Chrome/112.0.5615.204 Electron/24.5.0 Safari/537.36" etag="1e0HwSoTWo23MOrhrNsd" version="21.3.7" type="device">
+<mxfile host="Electron" modified="2023-09-03T19:19:01.461Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.3.7 Chrome/112.0.5615.204 Electron/24.5.0 Safari/537.36" etag="-98-8Tk8s9ORJ92JDB-l" version="21.3.7" type="device">
   <diagram name="Página-1" id="A6Nziyx6I6ZekGtQeBus">
     <mxGraphModel dx="1410" dy="2078" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,13 +7,13 @@
         <mxCell id="XNwFwsFVzcUq8IYY0MSn-39" value="Disciplina" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="715" y="168" width="230" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="XNwFwsFVzcUq8IYY0MSn-40" value="- nome : String&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- eObrigatoria: Boolean&lt;br&gt;- maxAlunos: int&lt;br&gt;- professor : Professor&lt;br&gt;- disciplina : Disciplina&lt;br&gt;- alunos : List&amp;lt;Alunos&amp;gt;&lt;br&gt;- status: StatusDisciplina" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XNwFwsFVzcUq8IYY0MSn-39" vertex="1">
+        <mxCell id="XNwFwsFVzcUq8IYY0MSn-40" value="- nome : String&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- eObrigatoria: Boolean&lt;br&gt;- maxAlunos: int&lt;br&gt;- professores : List&amp;lt;Professor&amp;gt;&lt;br&gt;- disciplina : Disciplina&lt;br&gt;- alunos : List&amp;lt;Alunos&amp;gt;&lt;br&gt;- status: StatusDisciplina" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XNwFwsFVzcUq8IYY0MSn-39" vertex="1">
           <mxGeometry y="26" width="230" height="124" as="geometry" />
         </mxCell>
         <mxCell id="XNwFwsFVzcUq8IYY0MSn-41" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XNwFwsFVzcUq8IYY0MSn-39" vertex="1">
           <mxGeometry y="150" width="230" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="XNwFwsFVzcUq8IYY0MSn-42" value="+ adicionarProf(Professor p) : boolean&lt;br&gt;+ adicionarAluno(Aluno a): boolean&lt;br&gt;+ verificaPeriodoMat(): Boolean&lt;br&gt;encerraPeriodoDeMatricula(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XNwFwsFVzcUq8IYY0MSn-39" vertex="1">
+        <mxCell id="XNwFwsFVzcUq8IYY0MSn-42" value="+ adicionarProf(Professor) : void&lt;br&gt;+ adicionarAluno(Aluno): boolean&lt;br&gt;+ verificaPeriodoMat(): Boolean&lt;br&gt;encerraPeriodoDeMatricula(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XNwFwsFVzcUq8IYY0MSn-39" vertex="1">
           <mxGeometry y="158" width="230" height="72" as="geometry" />
         </mxCell>
         <mxCell id="XNwFwsFVzcUq8IYY0MSn-49" value="n" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
@@ -115,7 +115,7 @@
         <mxCell id="xEQoK2qNsYIxzToRfZGO-14" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="xEQoK2qNsYIxzToRfZGO-12" vertex="1">
           <mxGeometry y="50" width="280" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="xEQoK2qNsYIxzToRfZGO-15" value="+ matricular(Disciplina discplina): Boolean&lt;br&gt;+ cancelarMatricula(Disciplina disciplina): Boolean&lt;br&gt;+ menuLogin(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="xEQoK2qNsYIxzToRfZGO-12" vertex="1">
+        <mxCell id="xEQoK2qNsYIxzToRfZGO-15" value="+ matricular(Disciplina): Boolean&lt;br&gt;+ cancelarMatricula(Disciplina): Boolean&lt;br&gt;+ menuLogin(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="xEQoK2qNsYIxzToRfZGO-12" vertex="1">
           <mxGeometry y="58" width="280" height="62" as="geometry" />
         </mxCell>
         <mxCell id="xEQoK2qNsYIxzToRfZGO-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="XNwFwsFVzcUq8IYY0MSn-40" target="xEQoK2qNsYIxzToRfZGO-13" edge="1">
@@ -250,7 +250,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lFsVYszMkkGMZhGlrzol-1" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;fontSize=12;curved=1;" edge="1" parent="1" source="EbsPfiUkHNnPwUb5d9H_-2" target="xEQoK2qNsYIxzToRfZGO-12">
+        <mxCell id="lFsVYszMkkGMZhGlrzol-1" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;fontSize=12;curved=1;" parent="1" source="EbsPfiUkHNnPwUb5d9H_-2" target="xEQoK2qNsYIxzToRfZGO-12" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1040" y="584" as="sourcePoint" />
             <mxPoint x="1079" y="417" as="targetPoint" />
