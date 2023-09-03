@@ -2,7 +2,7 @@ package projeto;
 
 import java.util.Date;
 
-public class Secretario extends Pessoa{
+public class Secretario extends Usuario{
     public Secretario(String nome, Date dataNascimento, String cpf, String telefone) {
         super(nome, dataNascimento, cpf, telefone);
     }
@@ -21,4 +21,10 @@ public class Secretario extends Pessoa{
     public void gerenciarProfessor(){
 
     }
+
+	@Override
+	public void menuLogin() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'menuLogin'");
+	}
 }

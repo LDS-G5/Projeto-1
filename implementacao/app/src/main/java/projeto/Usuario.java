@@ -2,18 +2,19 @@ package projeto;
 
 import java.util.Date;
 
-public abstract class Pessoa {
-    public Pessoa(String nome, Date dataNascimento, String cpf, String telefone) {
+public abstract class Usuario {
+    private String nome;
+
+    private Date dataNascimento;
+    private String cpf;
+    private String telefone;
+
+    public Usuario(String nome, Date dataNascimento, String cpf, String telefone) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
         this.telefone = telefone;
     }
-
-    private String nome;
-    private Date dataNascimento;
-    private String cpf;
-    private String telefone;
 
     public String getNome() {
         return nome;
@@ -46,4 +47,6 @@ public abstract class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+	public abstract void menuLogin();
 }
