@@ -4,16 +4,17 @@ import java.util.Date;
 
 public abstract class Usuario {
     private String nome;
-
+	private String senha;
     private Date dataNascimento;
     private String cpf;
     private String telefone;
 
-    public Usuario(String nome, Date dataNascimento, String cpf, String telefone) {
+    public Usuario(String nome, Date dataNascimento, String cpf, String telefone, String senha) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
         this.telefone = telefone;
+		this.senha = senha;
     }
 
     public String getNome() {
@@ -48,5 +49,13 @@ public abstract class Usuario {
         this.telefone = telefone;
     }
 
-	public abstract void menuLogin();
+	public boolean login(String senha) {
+		if (this.senha.equals(senha)) {
+			menuLogin();
+			return true;
+		}
+		return false;
+	}
+
+	protected abstract void menuLogin();
 }

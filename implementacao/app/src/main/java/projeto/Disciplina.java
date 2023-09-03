@@ -3,11 +3,14 @@ package projeto;
 import java.util.ArrayList;
 import java.util.List;
 
+import projeto.enums.StatusDisciplina;
+
 public class Disciplina {
     private String nome;
+	private StatusDisciplina status = StatusDisciplina.Esperando;
 	private boolean obrigatoria;
-	List<Aluno> alunos;
-	List<Professor> professores;
+	private List<Aluno> alunos;
+	private List<Professor> professores;
 	private final int maxAlunos = 60;
 
 	public Disciplina(String nome) {
@@ -17,11 +20,14 @@ public class Disciplina {
     }
 
 	public boolean addAluno(Aluno aluno) {
-		if (alunos.size() < maxAlunos) {
-			alunos.add(aluno);
-			return true;
+		if (status != StatusDisciplina.Esperando) {
+			return false;
 		}
-		return false;
+		alunos.add(aluno);
+		if (alunos.size() >= maxAlunos) {
+			status = StatusDisciplina.Fechado;
+		}
+		return true;
 	}
 
 	public void addProfessor(Professor professor) {
@@ -39,4 +45,17 @@ public class Disciplina {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+	public void encerraPeriodoDeMatricula() {
+		switch (status) {
+			case Esperando:
+				status = alunos.size() >= 3 ? StatusDisciplina.Ativo : StatusDisciplina.Cancelado;
+				break;
+			case Fechado:
+				status = StatusDisciplina.Ativo;
+				break;
+			default:
+				break;
+		}
+	}
 }

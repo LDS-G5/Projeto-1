@@ -1,18 +1,25 @@
 package projeto;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
     private String nome;
-    private  int creditos;
-    private List<Disciplina> listDisciplinas;
+    private int creditos;
+    private List<Disciplina> disciplinas;
 
     public Curso(String nome, int creditos, List<Disciplina> listDisciplinas) {
         this.nome = nome;
         this.creditos = creditos;
-        this.listDisciplinas = listDisciplinas;
+        this.disciplinas = listDisciplinas;
     }
 
-    public String getNome() {
+    public Curso(String nome, int creditos) {
+		this.nome = nome;
+		this.creditos = creditos;
+		this.disciplinas = new ArrayList<Disciplina>();
+	}
+
+	public String getNome() {
         return nome;
     }
 
@@ -28,11 +35,15 @@ public class Curso {
         this.creditos = creditos;
     }
 
-    public List<Disciplina> getListDisciplinas() {
-        return listDisciplinas;
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
     }
 
-    public void setListDisciplinas(List<Disciplina> listDisciplinas) {
-        this.listDisciplinas = listDisciplinas;
+    public void setDisciplinas(List<Disciplina> listDisciplinas) {
+        this.disciplinas = listDisciplinas;
     }
+
+	public void encerraPeriodoDeMatricula() {
+		disciplinas.stream().forEach(Disciplina::encerraPeriodoDeMatricula);
+	}
 }

@@ -3,12 +3,41 @@
  */
 package projeto;
 
+import java.util.Scanner;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+	static Scanner sc = new Scanner(System.in);
+	
+    public static void main(String[] args) {
+		System.out.println("Digite a opção desejada");
+		System.out.println("1 - Cadastrar");
+		System.out.println("2 - Fazer Login");
+		System.out.println("0 - Sair");
+		int opcao;
+		do {
+			opcao = sc.nextInt();
+			switch (opcao) {
+			}
+		} while (opcao != 0);
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+	public static void cadastrar() {}
+
+	public static void fazerLogin() {
+		do {
+			System.out.print("Digite seu CPF: ");
+			String cpf = sc.nextLine();
+			System.out.print("Digite sua senha: ");
+			String senha = sc.nextLine();
+			if (Universidade.login(cpf, senha)) {
+				break;
+			}
+			System.out.println("CPF ou senha inválidos");
+			System.out.println("Digite 0 para voltar ou qualquer outro número para tentar novamente");
+			int opcao = sc.nextInt();
+			if (opcao == 0) {
+				break;
+			}
+		} while (true);
+	}
 }

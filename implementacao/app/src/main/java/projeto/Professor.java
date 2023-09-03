@@ -9,10 +9,11 @@ import projeto.menus.MenuProfessor;
 public class Professor extends Usuario{
 	List<Disciplina> disciplinas;
 
-    public Professor(String nome, Date dataNascimento, String cpf, String telefone) {
-        super(nome, dataNascimento, cpf, telefone);
+    public Professor(String nome, Date dataNascimento, String cpf, String telefone, String senha) {
+        super(nome, dataNascimento, cpf, telefone, senha);
 		disciplinas = new ArrayList<Disciplina>();
     }
+
     public void verificarMatriculados(List<Aluno> a){
         for(Aluno al :a){
             System.out.println(al.getNome());
@@ -29,7 +30,7 @@ public class Professor extends Usuario{
 	}
 
 	@Override
-	public void menuLogin() {
+	protected void menuLogin() {
 		MenuProfessor menu = new MenuProfessor(this);
 		menu.menu();
 	}

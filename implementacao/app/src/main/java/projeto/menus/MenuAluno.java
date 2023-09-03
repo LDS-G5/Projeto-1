@@ -14,8 +14,8 @@ public class MenuAluno {
 		this.aluno = aluno;
 	}
 	public void menu() {
-		int opcao =99;
-		while(opcao != 0) {
+		int opcao;
+		do {
 			System.out.println("Digite qual opção deseja");
 			System.out.println("1- Ver disciplinas");
 			System.out.println("2- Matricular em uma disciplina");
@@ -46,6 +46,6 @@ public class MenuAluno {
 				default:
 					System.out.println("Opção invalida");
 			}
-		}
+		} while(opcao != 0);
 	}
 }

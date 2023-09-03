@@ -9,8 +9,8 @@ import projeto.menus.MenuAluno;
 public class Aluno extends Usuario {
 	List<Disciplina> disciplinas;
 
-    public Aluno(String nome, Date dataNascimento, String cpf, String telefone) {
-        super(nome, dataNascimento, cpf, telefone);
+    public Aluno(String nome, Date dataNascimento, String cpf, String telefone, String senha) {
+        super(nome, dataNascimento, cpf, telefone, senha);
 		disciplinas = new ArrayList<Disciplina>();
 	}
 
@@ -32,7 +32,7 @@ public class Aluno extends Usuario {
 	}
 
 	@Override
-	public void menuLogin() {
+	protected void menuLogin() {
 		MenuAluno menu = new MenuAluno(this);
 		menu.menu();
 	}
