@@ -2,6 +2,8 @@ package projeto;
 
 import java.util.Date;
 
+import projeto.menus.MenuSecretario;
+
 public class Secretario extends Usuario{
     public Secretario(String nome, Date dataNascimento, String cpf, String telefone) {
         super(nome, dataNascimento, cpf, telefone);
@@ -21,7 +23,7 @@ public class Secretario extends Usuario{
 
 	@Override
 	public void menuLogin() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'menuLogin'");
+		MenuSecretario menu = new MenuSecretario(this);
+		menu.menu();
 	}
 }

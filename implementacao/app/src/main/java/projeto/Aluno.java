@@ -15,17 +15,16 @@ public class Aluno extends Usuario {
 	}
 
 	public boolean matricular(Disciplina disciplina) {
-		boolean matriculou = false;
-		if (disciplina.isObrigatoria()) {
-			matriculou = disciplinas.stream().filter(Disciplina::isObrigatoria).count() < 4;
+		long obrigatoriasCount = disciplinas.stream().filter(Disciplina::isObrigatoria).count();
+		long optativasCount = disciplinas.stream().filter(d -> !d.isObrigatoria()).count();
+		if (obrigatoriasCount < 4 || optativasCount < 2) {
+			return false;
 		}
-		else {
-			matriculou = disciplinas.stream().filter((d) -> !d.isObrigatoria()).count() < 2;
-		}
-		if (matriculou) {
+		if (disciplina.addAluno(this)) {
 			disciplinas.add(disciplina);
+			return true;
 		}
-		return matriculou;
+		return false;
 	}
 
 	public boolean cancelarMatricula(Disciplina disciplina) {

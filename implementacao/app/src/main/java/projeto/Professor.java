@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import projeto.menus.MenuProfessor;
+
 public class Professor extends Usuario{
 	List<Disciplina> disciplinas;
 
@@ -16,9 +18,19 @@ public class Professor extends Usuario{
             System.out.println(al.getNome());
         }
     }
+
+	public boolean cadastrarDisciplina(Disciplina disciplina) {
+		if (disciplinas.contains(disciplina)) {
+			return false;
+		}
+		disciplina.addProfessor(this);
+		disciplinas.add(disciplina);
+		return true;
+	}
+
 	@Override
 	public void menuLogin() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'menuLogin'");
+		MenuProfessor menu = new MenuProfessor(this);
+		menu.menu();
 	}
 }
